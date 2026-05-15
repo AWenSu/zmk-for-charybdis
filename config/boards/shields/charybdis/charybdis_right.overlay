@@ -109,6 +109,18 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
+
+        // Layer 5 = DPI Boost 2x (300 → 600 CPI)
+        dpi2x {
+            layers = <5>;
+            input-processors = <&zip_xy_scaler 2 1>;
+        };
+
+        // Layer 6 = DPI Max 4x (300 → 1200 CPI)
+        dpi4x {
+            layers = <6>;
+            input-processors = <&zip_xy_scaler 4 1>;
+        };
     };
 };
 
