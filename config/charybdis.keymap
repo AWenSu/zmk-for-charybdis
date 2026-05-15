@@ -123,9 +123,9 @@
         F_layers {
             bindings = <
 &kp F1       &kp F2     &kp F3     &kp F4     &kp F5      &kp F6          &kp F7     &kp F8     &kp F9    &kp F10   &kp F11    &kp F12
-&kp LG(TAB)  &kp LG(Q)  &kp LG(W)  &tog 5     &fat_arrow  &thin_arrow     &kp PIPE   &kp AMPS   &kp LBKT  &kp RBKT  &kp GRAVE  &kp UNDER
+&kp LG(TAB)  &kp LG(Q)  &kp LG(W)  &trans     &fat_arrow  &thin_arrow     &kp PIPE   &kp AMPS   &kp LBKT  &kp RBKT  &kp GRAVE  &kp UNDER
 &trans       &kp HOME   &kp PG_DN  &kp PG_UP  &kp END     &kp LG(GRAVE)   &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT &kp LBRC   &kp RBRC
-&trans       &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &tog 6          &kp EQUAL  &mkp LCLK  &mkp RCLK &kp MINUS &kp TILDE  &trans
+&trans       &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans          &kp EQUAL  &mkp LCLK  &mkp RCLK &kp MINUS &kp TILDE  &trans
                                     &trans     &trans      &To0_macro      &mkp LCLK  &mkp RCLK
                                                &trans      &trans          &trans
             >;
@@ -144,7 +144,7 @@
 
         scroll-layers {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &to 0   &to 5   &to 7   &to 6   &to 8     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -176,6 +176,28 @@
         };
 
         dpi-max-layers {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
+                                &trans  &trans    &trans
+            >;
+        };
+
+        dpi3x-layers {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
+                                &trans  &trans    &trans
+            >;
+        };
+
+        dpi5x-layers {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans

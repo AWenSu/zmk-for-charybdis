@@ -131,6 +131,18 @@
             layers = <6>;
             input-processors = <&xy_scaler 4 1>;
         };
+
+        // Layer 7 = DPI 3x (300 → 900 CPI)
+        dpi3x {
+            layers = <7>;
+            input-processors = <&xy_scaler 3 1>;
+        };
+
+        // Layer 8 = DPI 5x (300 → 1500 CPI)
+        dpi5x {
+            layers = <8>;
+            input-processors = <&xy_scaler 5 1>;
+        };
     };
 };
 
