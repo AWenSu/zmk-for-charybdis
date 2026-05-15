@@ -5,6 +5,7 @@
  */
  
 #include "charybdis.dtsi"
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 &default_transform {
     col-offset = <6>;
@@ -106,9 +107,30 @@
 
 
 / {
+    // Custom XY scaler: param1=multiplier, param2=divisor
+    // Usage: <&xy_scaler 2 1> = 2x speed, <&xy_scaler 1 2> = half speed
+    xy_scaler: xy_scaler {
+        compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <2>;
+        type = <INPUT_EV_REL>;
+        codes = <INPUT_REL_X>, <INPUT_REL_Y>;
+    };
+
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
+
+        // Layer 5 = DPI 2x (300 → 600 CPI)
+        dpi2x {
+            layers = <5>;
+            input-processors = <&xy_scaler 2 1>;
+        };
+
+        // Layer 6 = DPI 4x (300 → 1200 CPI)
+        dpi4x {
+            layers = <6>;
+            input-processors = <&xy_scaler 4 1>;
+        };
     };
 };
 
