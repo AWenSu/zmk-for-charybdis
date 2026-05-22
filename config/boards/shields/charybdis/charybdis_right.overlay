@@ -126,10 +126,10 @@
             input-processors = <&xy_scaler 2 1>;
         };
 
-        // Layer 6 = DPI 4x (300 → 1200 CPI)
-        dpi4x {
+        // Layer 6 = DPI 4/3 (300 → 400 CPI)
+        dpi400 {
             layers = <6>;
-            input-processors = <&xy_scaler 4 1>;
+            input-processors = <&xy_scaler 4 3>;
         };
 
         // Layer 7 = DPI 3x (300 → 900 CPI)
@@ -138,10 +138,10 @@
             input-processors = <&xy_scaler 3 1>;
         };
 
-        // Layer 8 = DPI 5x (300 → 1500 CPI)
-        dpi5x {
+        // Layer 8 = DPI 5/3 (300 → 500 CPI)
+        dpi500 {
             layers = <8>;
-            input-processors = <&xy_scaler 5 1>;
+            input-processors = <&xy_scaler 5 3>;
         };
     };
 };

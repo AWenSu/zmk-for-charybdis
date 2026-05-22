@@ -138,11 +138,11 @@
 
         scroll-layers {
             bindings = <
-&trans  &to 0   &to 5   &to 7   &to 6   &to 8     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
+&trans  &to 0   &to 6   &to 8   &to 5   &to 7     &trans         &trans  &trans         &trans          &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans         &trans  &trans         &trans          &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp C_VOL_UP   &trans  &trans         &trans          &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp C_VOL_DN   &trans  &kp LC(LEFT)   &kp LC(RIGHT)   &trans  &trans
+                        &trans  &trans  &trans    &trans         &trans
                                 &trans  &trans    &trans
             >;
         };
