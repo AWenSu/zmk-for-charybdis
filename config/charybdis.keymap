@@ -51,7 +51,7 @@
         td_mo1: td_mo1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&mo 1>, <&kp LA(SPACE)>;
         };
     };
