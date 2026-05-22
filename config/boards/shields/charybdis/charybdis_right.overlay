@@ -107,42 +107,9 @@
 
 
 / {
-    // Custom XY scaler: param1=multiplier, param2=divisor
-    // Usage: <&xy_scaler 2 1> = 2x speed, <&xy_scaler 1 2> = half speed
-    xy_scaler: xy_scaler {
-        compatible = "zmk,input-processor-scaler";
-        #input-processor-cells = <2>;
-        type = <INPUT_EV_REL>;
-        codes = <INPUT_REL_X>, <INPUT_REL_Y>;
-    };
-
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-
-        // Layer 5 = DPI 2x (300 → 600 CPI)
-        dpi2x {
-            layers = <5>;
-            input-processors = <&xy_scaler 2 1>;
-        };
-
-        // Layer 6 = DPI 4/3 (300 → 400 CPI)
-        dpi400 {
-            layers = <6>;
-            input-processors = <&xy_scaler 4 3>;
-        };
-
-        // Layer 7 = DPI 3x (300 → 900 CPI)
-        dpi3x {
-            layers = <7>;
-            input-processors = <&xy_scaler 3 1>;
-        };
-
-        // Layer 8 = DPI 5/3 (300 → 500 CPI)
-        dpi500 {
-            layers = <8>;
-            input-processors = <&xy_scaler 5 3>;
-        };
     };
 };
 
